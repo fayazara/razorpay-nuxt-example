@@ -174,4 +174,11 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.bg-green-400 {
+  background-color: #68d391;
+}
+.bg-indigo-500 {
+  background-color: #667eea;
+}
+</style>
