@@ -127,19 +127,16 @@ export default {
     order() {
       const self = this;
       const rzp_options = {
-        key: process.env.RZP_KEY,
+        key: "rzp_test_jOrT5j2OGbNtck",
         amount: this.product.price * 100,
         name: "The Bollywood Store",
         description: this.product.title,
         handler: function(response) {
-          self.$toast.success(
-            `Payment Succesful`,
-            {
-              position: "bottom-center",
-              theme: "outline",
-              duration: 5000
-            }
-          );
+          self.$toast.success(`Payment Succesful`, {
+            position: "bottom-center",
+            theme: "outline",
+            duration: 5000
+          });
           self.payment_id = response.razorpay_payment_id;
         },
         modal: {
@@ -152,12 +149,12 @@ export default {
           }
         },
         prefill: {
-          email: 'test@email.com',
+          email: "test@email.com",
           contact: +914455667788
         },
         notes: {
           name: "Customer Name",
-          item: self.product.title,
+          item: self.product.title
         },
         theme: {
           color: "#667eea"
